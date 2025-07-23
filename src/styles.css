@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-gradient {
+    background: linear-gradient(135deg, #4F46E5 0%, #8B5CF6 100%);
+}
+.text-gradient {
+    background: linear-gradient(135deg, #A78BFA, #C4B5FD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.typing-cursor::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}
